@@ -67,11 +67,11 @@
       class="menu-wrapper header"
       :class="{ 'menu-show': menuShow, 'menu-hide': menuHide }"
     >
-      <v-menu
+      <!-- <v-menu
         @sidebarChange="change($event)"
         :minMenu="show"
         ref="menu"
-      ></v-menu>
+      ></v-menu> -->
     </div>
     <div class="content">
       <div
@@ -101,7 +101,7 @@
         <i class="el-icon-info" style="cursor:pointer" @click="tipIfShow"></i>   
         </div> -->
     </div>
-    <!-- <set-front :show='frontShow' v-if='frontShow' @close='closeFront'></set-front> -->
+    <set-front :show='frontShow' v-if='frontShow' @close='closeFront'></set-front>
     <v-guide :show="guideShow" v-if="guideShow" @close="closeGuide"></v-guide>
   </div>
 </template>

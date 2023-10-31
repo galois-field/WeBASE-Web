@@ -47,7 +47,6 @@ export default {
     };
     simulateLogin(params).then((res) => {
       if (res.data.code == 1) {
-        debugger;
         if (!res.data.data.user.loginName) {
           this.$message({
             message: "Not found loginName",
@@ -95,7 +94,6 @@ export default {
       getDeployType()
         .then((res) => {
           if (res.data.code == 0) {
-            debugger;
             localStorage.setItem("deployType", res.data.data);
             // router.push("/main");
             this.$router.go(0)

@@ -17,11 +17,12 @@ import Axios from 'axios'
 import router from '../router'
 import Cookies from 'js-cookie'
 import { debug } from 'request';
+import address from '../../static/js/href'
 let axiosIns = Axios.create({
     timeout: 60 * 1000,
-    headers:{
-        'Cache-Control':'no-cache',
-       'X-Requested-With': 'XMLHttpRequest'
+    headers: {
+        'Cache-Control': 'no-cache',
+        'X-Requested-With': 'XMLHttpRequest'
     }
 });
 // axiosIns.defaults.baseURL = 'http://127.0.0.1:3006';
@@ -35,17 +36,9 @@ axiosIns.defaults.validateStatus = function () {
 // http response interceptor
 axiosIns.interceptors.response.use(
     response => {
-        // if (response.data && response.data.code === 302000) {
-        //     router.push({   
-        //         path: '/login', 
-        //         query: { redirect: router.currentRoute.fullPath }
-        //     })
-        // }   
-        // if (response.data && (response.data.code === 202052 || response.data.code === 202053)) {
-        //     router.push({
-        //         path: "/login"
-        //     })
-        // }
+        if (response.data && (response.data.code === 302000 || response.data.code === 202052 || response.data.code === 202055)) {
+            window.location.href = address.address
+        }
         return response;
     },
     error => {
