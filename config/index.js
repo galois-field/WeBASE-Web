@@ -12,10 +12,17 @@ module.exports = {
         assetsPublicPath: '/',
         proxyTable: {
             '/mgr': {
-                target: 'http://127.0.0.1/', 
+                target: 'http://119.45.242.41:5001/', 
                 changeOrigin: true,
                 pathRewrite: { 
                     '^/mgr': ''
+                }
+            },
+            '/biz': {
+                target: 'http://122.190.56.35:31575/', 
+                changeOrigin: true,
+                pathRewrite: { 
+                    '^/biz': ''
                 }
             },
         },

@@ -245,7 +245,7 @@
                   <p class="color-8798AD text-right">
                     {{ item.blockTimestamp }}
                   </p>
-                </div>      
+                </div>
               </div>
             </div>
           </el-col>
@@ -370,13 +370,13 @@ export default {
     };
   },
   mounted: function () {
-     this.getConfigType();
+    this.getConfigType();
     this.groupId = localStorage.getItem("groupId");
     if (
       this.groupId ||
-      (localStorage.getItem("configData") == 3 ||
-        localStorage.getItem("deployType") == 0)
-    ) {            
+      localStorage.getItem("configData") == 3 ||
+      localStorage.getItem("deployType") == 0
+    ) {
       this.getNetworkDetails();
       this.getNodeTable();
       this.getBlockList();
@@ -387,7 +387,7 @@ export default {
         this.getChart();
       });
     }
-      Bus.$on("changGroup", val => {
+    Bus.$on("changGroup", (val) => {
       this.groupId = val;
       this.getNetworkDetails();
       this.getNodeTable();
@@ -398,18 +398,17 @@ export default {
         this.chartStatistics.chartSize.height = this.$refs.chart.offsetHeight;
         this.getChart();
       });
-        })
+    });
   },
   destroyed() {
-     Bus.$off("changGroup");
+    Bus.$off("changGroup");
   },
   methods: {
-        getConfigType: function () {
+    getConfigType: function () {
       getDeployType()
         .then((res) => {
           if (res.data.code == 0) {
             localStorage.setItem("deployType", res.data.data);
-         
           } else {
             this.$message({
               message: this.$chooseLang(res.data.code),

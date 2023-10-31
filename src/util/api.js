@@ -19,16 +19,24 @@ import { reviseParam } from './util'
 import qs from 'qs'
 import { debug } from 'request'
 
+//simulateLogin
+export function simulateLogin(params) {
+    return get({
+        url: `/biz/ns-design/oauth2/query_access_token`,
+        // url: `${url.ORG_LIST}/account/login`,
+        method: 'get',
+        params
+    })
+}
 //login
-export function login(data, code, token) {
+export function login(data, access_token) {
     return post({
-        url: `${url.ORG_LIST}/account/login?checkCode=${code}`,
+        url: `${url.ORG_LIST}/account/login?access_token=${access_token}`,
         // url: `${url.ORG_LIST}/account/login`,
         method: 'post',
         data: qs.stringify(data),
         headers: {
             'Content-Type': "application/x-www-form-urlencoded",
-            'token': token
         }
     })
 }

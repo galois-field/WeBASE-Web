@@ -15,7 +15,9 @@
  */
 
 /* customize class */
-
+html {
+    font-size: 80px !important;
+}
 .el-tooltip__popper{
     font-size: 14px;
      max-width:50% !important;

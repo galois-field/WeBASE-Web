@@ -76,18 +76,18 @@ const routes = [{
     component: resolve => require(['@/views/login/login'], resolve),
   },
   {
-    path: '/bigScreen',
+    path: '/',
     nameKey: "bigScreen",
     name: 'bigScreen',
-    component: bigScreen,
-    menuShow: false,
-    leaf: false,
+    component: main,
+    menuShow: true,
+    leaf: true,
     iconCls: 'wbs-icon-overview sidebar-icon',
-    // children: [
-    //     {
-    //         path: '/bigScreen', component: bigScreen, name: '数据大屏', nameKey: "bigScreen", menuShow: false, meta: { requireAuth: true }
-    //     }
-    // ]
+    children: [
+        {
+            path: '/bigScreen', component: bigScreen, name: '数据大屏', nameKey: "bigScreen", menuShow: true, meta: { requireAuth: true }
+        }
+    ]
   },
   {
     path: '/main',

@@ -36,7 +36,7 @@
                 </el-form-item>
             </el-form>
         </div>
-        <v-content-head :headTitle="$t('title.dataOverview')" ></v-content-head>
+        <!-- <v-content-head :headTitle="$t('title.dataOverview')" ></v-content-head> -->
         <div class="menu-wrapper header" :class="{'menu-show': menuShow,'menu-hide': menuHide}">
             <v-menu @sidebarChange="change($event)" :minMenu="show" ref='menu'></v-menu>
         </div>
@@ -68,7 +68,7 @@
         <i class="el-icon-info" style="cursor:pointer" @click="tipIfShow"></i>   
         </div> -->
     </div>
-        <set-front :show='frontShow' v-if='frontShow' @close='closeFront'></set-front>
+        <!-- <set-front :show='frontShow' v-if='frontShow' @close='closeFront'></set-front> -->
         <v-guide :show='guideShow' v-if='guideShow' @close='closeGuide'></v-guide>
     </div>
 </template>
@@ -516,7 +516,7 @@ export default {
                         type: "error",
                         duration: 2000
                     });
-                    router.push("/login");
+                    // router.push("/login");
                 }
             }).catch(err => {
                 this.$message({
@@ -524,7 +524,7 @@ export default {
                     type: "error",
                     duration: 2000
                 });
-                router.push("/login");
+                // router.push("/login");
             })
         },
         getFrontTable() {
@@ -626,7 +626,7 @@ export default {
     clear: both;
 }
 .menu-wrapper {
-    height: 96%;
+    height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   z-index: 998;
@@ -731,8 +731,10 @@ export default {
 }
 .content {
   width: 100%;
-  height: calc(100vh - 56px);
-  padding-top: 56px;
+  height: calc(100vh);
   display: flex;
+}
+.bg-f7f7f7{
+    padding: 20px;
 }
 </style>
