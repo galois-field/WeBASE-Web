@@ -34,7 +34,7 @@ export default {
     const urlSearchParams = new URLSearchParams(urlStr);
     const result = Object.fromEntries(urlSearchParams.entries());
     console.log(result);
-    if (!result.access_token) {
+    if (!result.token) {
       this.$message({
         message: "未找到token",
         type: "error",
@@ -43,7 +43,7 @@ export default {
       return;
     }
     const params = {
-      access_token: result.access_token,
+      access_token: result.token,
     };
     simulateLogin(params).then((res) => {
       if (res.data.code == 1) {
@@ -54,7 +54,7 @@ export default {
             duration: 2000,
           });
         }
-        this.userLogin(res.data.data.user.loginName, result.access_token);
+        this.userLogin(res.data.data.user.loginName, result.token);
       } else {
         this.$message({
           message: "System error",
