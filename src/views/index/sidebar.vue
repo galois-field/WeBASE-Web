@@ -585,7 +585,7 @@ export default {
 }
 .sidebar-content >>> .el-menu--collapse .is-active .el-tooltip {
   padding-left: 17px !important;
-  background-color: #1e293e;
+  /* background-color: #1e293e; */
 }
 .mini-sidebar-contract-icon {
   position: relative;

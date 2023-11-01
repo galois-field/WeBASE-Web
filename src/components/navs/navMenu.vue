@@ -24,14 +24,14 @@
         >{{ headHref.content }}</a
       >
     </div>
-    <div :class="['guideLine',{'guideCheck':navContentShow}]" v-if="noShow">
+    <!-- <div :class="['guideLine',{'guideCheck':navContentShow}]" v-if="noShow">
       <el-button
         size="small"
         type=""
         icon="el-icon-tickets"
         @click="navShow"
       ></el-button>
-    </div>
+    </div> -->
   </div>
 </template>
 

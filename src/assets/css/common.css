@@ -15,9 +15,9 @@
  */
 
 /* customize class */
-/* html {
+html {
     font-size: 80px !important;
-} */
+}
 .el-tooltip__popper{
     font-size: 14px;
      max-width:50% !important;
@@ -485,9 +485,9 @@ td {
 .el-submenu__title {
     text-align: left;
 }
-.el-menu-item{
+/* .el-menu-item{
     color:white
-}
+} */
 
 .el-menu-item-group__title {
     padding: 0;
