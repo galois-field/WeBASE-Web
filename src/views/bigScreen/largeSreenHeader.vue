@@ -35,7 +35,7 @@ export default {
       nowTime1: "",
       nowTime2: "",
       groupId: localStorage.getItem("groupId"),
-      groupName: "WeBASE数据大屏",
+      groupName: "青海国土区块链平台",
     };
   },
   mounted() {
@@ -74,7 +74,7 @@ export default {
           res.data.data.description == null ||
           res.data.data.description == "synchronous"
         ) {
-          this.groupName = "WeBASE数据大屏";
+          this.groupName = "青海国土区块链平台";
         } else {
           this.groupName = res.data.data.description;
         }

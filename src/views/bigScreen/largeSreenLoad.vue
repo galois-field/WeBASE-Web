@@ -5,7 +5,7 @@
         <div class="navLeft"></div>
         <div class="leftLine"></div>
         <div class="navMiddle">
-          <span>WeBASE数据大屏</span>
+          <span>青海国土区块链平台</span>
         </div>
         <div class="rightLine"></div>
         <div class="navRight"></div>
