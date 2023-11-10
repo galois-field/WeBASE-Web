@@ -1173,8 +1173,7 @@ export default {
     },
   },
 };
-
-debugger</script>
+</script>
 <style scoped>
 .module-wrapper {
   height: 100%;

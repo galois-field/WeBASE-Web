@@ -62,7 +62,7 @@
         </el-form-item>
       </el-form>
     </div> -->
-    <!-- <v-content-head :headTitle="$t('title.dataOverview')" ></v-content-head> -->
+    <v-content-head :headTitle="$t('title.dataOverview')" v-show="false" ></v-content-head>
     <div
       class="menu-wrapper header"
       :class="{ 'menu-show': menuShow, 'menu-hide': menuHide }"
@@ -269,7 +269,7 @@ export default {
         this.getChart();
       });
     },
-    getNetworkDetails: function () {
+    getNetworkStatistics: function () {
       this.loadingNumber = true;
       let groupId = this.groupId;
       getNetworkStatistics(groupId)
