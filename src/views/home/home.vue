@@ -370,6 +370,7 @@ export default {
     };
   },
   mounted: function () {
+    console.log('home')
     this.getConfigType();
     this.groupId = localStorage.getItem("groupId");
     if (

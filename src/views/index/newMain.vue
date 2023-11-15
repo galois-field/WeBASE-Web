@@ -62,7 +62,7 @@
         </el-form-item>
       </el-form>
     </div> -->
-    <v-content-head :headTitle="$t('title.dataOverview')" v-show="false" ></v-content-head>
+    <!-- <v-content-head :headTitle="$t('title.dataOverview')" v-show="false" ></v-content-head> -->
     <div
       class="menu-wrapper header"
       :class="{ 'menu-show': menuShow, 'menu-hide': menuHide }"
@@ -240,7 +240,8 @@ export default {
       return data;
     },
   },
-  mounted() {
+  created() {
+    console.log('newmain')
     this.getRefreshFront();
     this.getEncryption();
     this.getGroupList();
