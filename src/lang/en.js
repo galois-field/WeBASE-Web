@@ -219,7 +219,7 @@ export default {
         here: "Here",
         enterHost: "Enter host management",
         environmentReady: "Environment Ready",
-        readyAnsibleInfo: "You need to install ansible on the machine where the WeBASE-Node-Manager is located and configure the private key for ansible",
+        readyAnsibleInfo: "You need to install ansible on the machine where the Node-Manager is located and configure the private key for ansible",
         readyDockerInfo: "You need to install the latest version of docker and start docker",
         visualization: "Visualization of deployment process",
         addHostInfo: "Enter host management, click Add host button, fill in IP and file path (file path is the installation path of node)",

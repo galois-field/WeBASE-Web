@@ -253,16 +253,16 @@ const routes = [
           requireAuth: true
         }
       },
-      {
-        path: '/contractWarehouse',
-        component: contractWarehouse,
-        name: '合约仓库',
-        nameKey: 'contractWarehouse',
-        menuShow: true,
-        meta: {
-          requireAuth: false
-        }
-      },
+      // {
+      //   path: '/contractWarehouse',
+      //   component: contractWarehouse,
+      //   name: '合约仓库',
+      //   nameKey: 'contractWarehouse',
+      //   menuShow: true,
+      //   meta: {
+      //     requireAuth: false
+      //   }
+      // },
       // { path: '/abiList', component: abiList, name: 'Abi列表', nameKey: "abiList", menuShow: false, meta: { requireAuth: true } },
       {
         path: '/parseAbi',

@@ -279,8 +279,8 @@ let errCode = {
     zh: "群组列表为空，请到节点服务中检查节点共识状态"
   },
   "102000": {
-    en: "WeBASE-Node-Manager system exception",
-    zh: "WeBASE-Node-Manager系统异常，请到后台的log目录中检查异常原因"
+    en: "Node-Manager system exception",
+    zh: "节点管理服务系统异常，请到后台的log目录中检查异常原因"
   },
   "102001": {
     en: "system exception: please check front",
@@ -297,8 +297,8 @@ let errCode = {
       "当webase为v1.3.2以上版本（含）时，fisco bcos节点必须为v2.4.1以上版本（含）"
   },
   "103001": {
-    en: "WeBASE-Sign system exception",
-    zh: "WeBASE-Sign系统异常，请到sign后台的log目录中检查异常原因"
+    en: "Sign system exception",
+    zh: "签名服务系统异常，请到sign后台的log目录中检查异常原因"
   },
   "201001": {
     en: "groupId cannot be empty",
@@ -422,7 +422,7 @@ let errCode = {
   },
   "201032": {
     en: "not found config of keyServer",
-    zh: "找不到keyServer（WeBASE-Sign）的配置"
+    zh: "找不到keyServer（签名服务）的配置"
   },
   "201033": {
     en: "data request sign error",
@@ -1640,7 +1640,7 @@ let errCode = {
     zh: "单个主机最多部署 4 个节点"
   },
   "202468": {
-    en: "Host of WeBASE-Node-Manager's ip is already existed.",
+    en: "Host of Node-Manager's ip is already existed.",
     zh: "节点管理服务主机IP(127.0.0.1)已存在。"
   },
   "202469": {
