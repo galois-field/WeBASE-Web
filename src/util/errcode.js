@@ -426,7 +426,7 @@ let errCode = {
   },
   "201033": {
     en: "data request sign error",
-    zh: "访问webase-sign失败，请检查配置是否正确，网络是否正常"
+    zh: "访问签名服务失败，请检查配置是否正确，网络是否正常"
   },
   "201034": {
     en: "groupId not exist",
@@ -882,7 +882,7 @@ let errCode = {
     zh: "Sdk的peers与新peers相同"
   },
   "201604": {
-    en: "webase-front connect to new peers ip port failed!",
+    en: "front-service connect to new peers ip port failed!",
     zh: "节点前置连接到新peers IP端口失败!"
   },
   "201605": {
@@ -950,13 +950,13 @@ let errCode = {
     zh: "部署liquid时，合约地址不得为空"
   },
   "201634": {
-    en: "Liquid environment not configured in the host of webase-front",
-    zh: "webbase-front主机中未配置Liquid环境，请先按节点前置文档进行配置"
+    en: "Liquid environment not configured in the host of front-service",
+    zh: "节点前置服务主机中未配置Liquid环境，请先按节点前置文档进行配置"
   },
   "201635": {
     en:
-      "Create new liquid project failed, please check 'liquid' directory in webase-front",
-    zh: "创建新的Liquid项目失败，请检查webbase-front中的“liquid”目录"
+      "Create new liquid project failed, please check 'liquid' directory in front-service",
+    zh: "创建新的Liquid项目失败，请检查节点前置服务中的“liquid”目录"
   },
   "201636": {
     en: "Create new liquid project and set gitee url failed",
@@ -972,13 +972,13 @@ let errCode = {
   },
   "201639": {
     en:
-      "Liquid compile target file not exist, please check 'liquid' directory in webase-front",
-    zh: "Liquid编译目标文件不存在，请检查webbase-front中的'liquid'目录"
+      "Liquid compile target file not exist, please check 'liquid' directory in front-service",
+    zh: "Liquid编译目标文件不存在，请检查节点前置服务中的'liquid'目录"
   },
   "201640": {
     en:
-      "Read liquid contract's abi and bin file failed, please check 'liquid' directory in webase-front",
-    zh: "读取Liquid合约的abi和bin文件失败，请检查webbase-front中的'liquid'目录"
+      "Read liquid contract's abi and bin file failed, please check 'liquid' directory in front-service",
+    zh: "读取Liquid合约的abi和bin文件失败，请检查节点前置服务中的'liquid'目录"
   },
   "201665": {
     en: "Build eventSubscribe instance of new group failed",
@@ -1629,7 +1629,7 @@ let errCode = {
     en:
       "webaseSignAddress cannot be 127.0.0.1 or localhost in application.yml file",
     zh:
-      "配置项application.yml文件中webaseSign的地址不能是127.0.0.1或localhost，请修改后台配置"
+      "配置项application.yml文件中签名服务的地址不能是127.0.0.1或localhost，请修改后台配置"
   },
   "202466": {
     en: "Please pull the Docker image manually in host /ip/",
