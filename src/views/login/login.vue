@@ -19,20 +19,9 @@
       <lang-select class="right-menu-item hover-effect"></lang-select>
     </div>
     <div class="login">
-      <div>
-        <svg
-          style="
-            width: 142px;
-            height: 142px;
-            fill: currentColor;
-            overflow: hidden;
-          "
-          aria-hidden="true"
-        >
-          <use xlink:href="#wbs-icon-WeBASE"></use>
-        </svg>
+      <div class="logo-title-text">
         <p class="logo-content">
-          WeBank Blockchain Application Software Extension
+          青海国土空间基础信息平台 - 区块链管理平台
         </p>
       </div>
       <div class="msg-wrapper">
@@ -391,14 +380,17 @@ export default {
   text-align: center;
   box-sizing: border-box;
 }
+.logo-title-text {
+  padding-bottom:50px;
+}
 .logo-content {
   position: absolute;
   width: 100%;
-  top: 90px;
+  top: 30px;
   left: 0;
   text-align: center;
-  font-size: 12px;
-  color: #979faa;
+  font-size: 18px;
+  color: #20D4D9;
   letter-spacing: 0.02px;
 }
 .msg-wrapper {
