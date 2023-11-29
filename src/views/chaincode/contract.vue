@@ -89,7 +89,7 @@ export default {
         : "",
       versionData: null,
       loading: false,
-      host: location.host,
+      host: location.href.split('#')[0],
       groupId: localStorage.getItem("groupId")
         ? localStorage.getItem("groupId")
         : "",
@@ -125,20 +125,20 @@ export default {
       {
         solcName: "v0.4.25",
         versionId: 0,
-        url: `http://${this.host}/static/js/v0.4.25.js`,
+        url: `${this.host}static/js/v0.4.25.js`,
         encryptType: 0,
         net: 1,
       },
       {
         solcName: "v0.4.25-gm",
         versionId: 1,
-        url: `http://${this.host}/static/js/v0.4.25-gm.js`,
+        url: `${this.host}static/js/v0.4.25-gm.js`,
         encryptType: 1,
         net: 1,
       },
       {
         solcName: "v0.5.2",
-        url: `http://${this.host}/static/js/v0.5.2.js`,
+        url: `${this.host}static/js/v0.5.2.js`,
         versionId: 2,
         encryptType: 0,
         net: 1,
@@ -146,21 +146,21 @@ export default {
       {
         solcName: "v0.5.2-gm",
         versionId: 3,
-        url: `http://${this.host}/static/js/v0.5.2-gm.js`,
+        url: `${this.host}static/js/v0.5.2-gm.js`,
         encryptType: 1,
         net: 1,
       },
       {
         solcName: "v0.6.10",
         versionId: 4,
-        url: `http://${this.host}/static/js/v0.6.10.js`,
+        url: `${this.host}static/js/v0.6.10.js`,
         encryptType: 0,
         net: 1,
       },
       {
         solcName: "v0.6.10-gm",
         versionId: 5,
-        url: `http://${this.host}/static/js/v0.6.10-gm.js`,
+        url: `${this.host}static/js/v0.6.10-gm.js`,
         encryptType: 1,
         net: 1,
       },

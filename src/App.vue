@@ -14,59 +14,69 @@
  * limitations under the License.
  */
 <template>
-    <div id="app" class="web-font">
-        <router-view></router-view>
-    </div>
+  <div id="app" class="web-font">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-import {VueLoading } from 'vue-loading-template'
+import { VueLoading } from 'vue-loading-template'
 export default {
-    name: "App",
-    components: {
-        VueLoading 
-    },
-    data() {
-        return {
-            load: this.$root.load,
-            userForm: {
-                password: ""
-            },
-            rules: {
-                password: [
-                    {
-                        required: true,
-                        message: "请输入组织名称",
-                        trigger: "blur"
-                    },
-                    {
-                        min: 1,
-                        max: 12,
-                        message: "长度在 1 到 12 个字符",
-                        trigger: "blur"
-                    }
-                ]
-            }
-        };
-    },
-    methods: {}
-};
+  name: 'App',
+  components: {
+    VueLoading
+  },
+  data() {
+    return {
+      load: this.$root.load,
+      userForm: {
+        password: ''
+      },
+      rules: {
+        password: [
+          {
+            required: true,
+            message: '请输入组织名称',
+            trigger: 'blur'
+          },
+          {
+            min: 1,
+            max: 12,
+            message: '长度在 1 到 12 个字符',
+            trigger: 'blur'
+          }
+        ]
+      }
+    }
+  },
+  methods: {},
+  beforeDestroy() {
+    // 清除缓存的操作
+    console.log('shanchu')
+    console.log(localStorage)
+    console.log(sessionStorage)
+    sessionStorage.clear()
+    localStorage.clear()
+    console.log(localStorage)
+    console.log(sessionStorage)
+  }
+}
 </script>
 
 <style>
 #app {
-    /* min-width: 800px; */
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #2E384D;
-    min-width: 1280px;
-    overflow: hidden;
+  /* min-width: 800px; */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2e384d;
+  min-width: 1280px;
+  overflow: hidden;
 }
 ul,
 li {
-    list-style: none;
+  list-style: none;
 }
 </style>

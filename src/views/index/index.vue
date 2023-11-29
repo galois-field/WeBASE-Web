@@ -22,6 +22,7 @@ export default {
     };
   },
   created: function () {
+    console.log(localStorage.getItem("token"))
     if (localStorage.getItem("token")) {
       if (localStorage.getItem("deployType")) {
         this.deployType = localStorage.getItem("deployType");

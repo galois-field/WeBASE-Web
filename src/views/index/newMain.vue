@@ -93,7 +93,7 @@
           viewHide: menuHide && contentShow,
         }"
       >
-        <router-view class="bg-f7f7f7"></router-view>
+        <router-view class="bg-f7f7f7" v-if='groupId'></router-view>
       </div>
       <nav-content></nav-content>
       <!-- <div class="tipContent"></div>
@@ -165,6 +165,7 @@ export default {
           height: 0,
         },
       },
+      groupId:'',
     };
   },
   computed: {
@@ -240,7 +241,7 @@ export default {
       return data;
     },
   },
-  created() {
+  mounted() {
     console.log('newmain')
     this.getRefreshFront();
     this.getEncryption();
@@ -531,8 +532,10 @@ export default {
         .then((res) => {
           if (res.data.code === 0) {
             if (res.data.data && res.data.data.length) {
+              this.groupId = res.data.data[0].groupId
               if (!localStorage.getItem("groupId")) {
                 localStorage.setItem("groupId", res.data.data[0].groupId);
+                this.groupId = res.data.data[0].groupId
               }
               if (!localStorage.getItem("groupName")) {
                 localStorage.setItem("groupName", res.data.data[0].groupName);

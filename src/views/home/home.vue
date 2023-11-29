@@ -281,9 +281,7 @@ export default {
     this.getConfigType()
     this.groupId = localStorage.getItem('groupId')
     console.log(localStorage.getItem('groupId'))
-    console.log('groupId:' + this.groupId)
     if (this.groupId || localStorage.getItem('configData') == 3 || localStorage.getItem('deployType') == 0) {
-      console.log('groupId1:' + this.groupId)
       this.getNetworkDetails()
       this.getNodeTable()
       this.getBlockList()

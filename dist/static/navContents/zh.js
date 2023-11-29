@@ -1,7 +1,7 @@
 export default {
   newNode: [{
     title: '部署节点',
-    content: `<div>自动各个主机安装FISCO BCOS 区块链节点 和 WeBASE-Front 节点前置服务
+    content: `<div>自动各个主机安装 区块链节点 和 节点前置服务
            <br/><br/>
            <p> 部署节点包含三步操作：</p>
            <p>1.&nbsp添加主机</p>
@@ -42,7 +42,7 @@ export default {
     title: '删除链',
     content: `<div>搭链失败或需要重新建链时，可以删除链后重新搭建。
             <br/>
-            <p>详情请参考WeBASE的可视化部署文档。</p>
+            <p>详情请参考可视化部署文档。</p>
             <a target='_blank' href='https://webasedoc.readthedocs.io/zh_CN/latest/docs/WeBASE-Install/visual_deploy.html'>https://webasedoc.readthedocs.io/zh_CN/latest/docs/WeBASE-Install/visual_deploy.html</a>       
             `
   }, {
@@ -50,7 +50,7 @@ export default {
     content: `支持修改节点的共识类型、重启节点、修改节点备注信息（展示于数据大屏）`
   }, {
     title: '新增节点前置',
-    content: `<div>WeBASE需要添加节点前置后才能对链进行管理
+    content: `<div>需要添加节点前置后才能对链进行管理
             <br/>
             <p>点击“添加节点前置”后，填入节点前置所在主机的IP和端口号即可。</p>
             <p>-&nbsp前置列表中展示该前置绑定的链上节点ID</p>
@@ -76,36 +76,36 @@ export default {
                 <p> “添加主机”时需要填入主机的公网IP或内网IP，并填入保存节点数据的目录</p>
                 <br/>
                 <p>注意：</p>
-                <p>-&nbsp节点主机需要保证WeBASE所在主机的免密登录</p>
+                <p>-&nbsp节点主机需要保证区块链管理平台所在主机的免密登录</p>
                 <p>-&nbsp节点主机需要安装docker、配置docker用户组、配置Ansible用户的sudo权限、安装FISCO BOCS节点依赖等</p>
-                <p>-&nbsp若填写的是127.0.0.1的主机，则所有节点将只能安装在WeBASE服务所在机器上</p>
+                <p>-&nbsp若填写的是127.0.0.1的主机，则所有节点将只能安装在区块链管理平台服务所在机器上</p>
                 <br/>
-                <p>详情请参考WeBASE的可视化部署文档。</p>
+                <p>详情请参考可视化部署文档。</p>
                 <a target='_blank' href='https://webasedoc.readthedocs.io/zh_CN/latest/docs/WeBASE-Install/visual_deploy.html'>https://webasedoc.readthedocs.io/zh_CN/latest/docs/WeBASE-Install/visual_deploy.html</a>s    
                 `
   }],
   contractList: [{
       title: '已登记合约列表',
-      content: `<div>包含使用WeBASE管理台部署的合约（不包含在WeBASE-Front页面部署的合约）
+      content: `<div>包含使用区块链管理平台部署的合约（不包含在前置节点页面部署的合约）
                 <br/>
-                <p>-&nbsp可以通过“导入ABI”按钮将节点前置或控制台等其他方式部署的合约导入到WeBASE中进行管理</p>
+                <p>-&nbsp可以通过“导入ABI”按钮将节点前置或控制台等其他方式部署的合约导入到区块链管理平台进行管理</p>
                 <p>-&nbspABI编码功能可以根据合约的ABI与合约方法的入参编码得到交易的input值</p>               
                 `
     },
     {
       title: '全量合约列表',
-      content: `<div>包含链上部署的所有合约，其中已登记合约会排序在前，未登记的合约（不在WeBASE中部署的合约）
+      content: `<div>包含链上部署的所有合约，其中已登记合约会排序在前，未登记的合约（不在区块链管理平台中部署的合约）
                 <br/>
-                <p>-&nbsp可以通过“导入ABI”按钮，填入合约ABI和合约名称后导入到WeBASE进行管理</p>                          
+                <p>-&nbsp可以通过“导入ABI”按钮，填入合约ABI和合约名称后导入到区块链管理平台进行管理</p>                          
                 `
     }
   ],
   cnsManagement: [{
     title: 'CNS查询',
-    content: `<div>可以根据合约名和合约版本查询CNS记录的所有合约，在WeBASE的“合约IDE”中部署合约时可以勾选“CNS”选项，进行合约部署的同时也注册CNS
+    content: `<div>可以根据合约名和合约版本查询CNS记录的所有合约，在区块链管理平台的“合约IDE”中部署合约时可以勾选“CNS”选项，进行合约部署的同时也注册CNS
                 <br/>
                 <p>-&nbsp链上CNS可以查询链上CNS注册的合约</p>
-                <p>-&nbsp本地CNS会记录在WeBASE中缓存的CNS数据</p>                                         
+                <p>-&nbsp本地CNS会记录在区块链管理平台中缓存的CNS数据</p>                                         
                 `
   }],
   CRUDServiceManagement: [{
@@ -127,31 +127,31 @@ export default {
     title: 'Event查看',
     content: `<div>根据合约地址、合约ABI及合约event在指定的区块范围内过滤得到合约事件列表。
                 <br/>
-                 <p>-&nbsp选中WeBASE中已有的合约地址可以自动填入合约ABI，并根据下拉框的event名来进行event过滤；也可以手动填入相应的信息</p>
-                 <p>-&nbsp此功能仅用于页面展示event信息，若需要使用event的事件推送功能，则参考WeBASE-Front的事件订阅功能，详情可在WeBASE-Front文档-附录中的“链上事件订阅”查看</p>
+                 <p>-&nbsp选中区块链管理平台中已有的合约地址可以自动填入合约ABI，并根据下拉框的event名来进行event过滤；也可以手动填入相应的信息</p>
+                 <p>-&nbsp此功能仅用于页面展示event信息，若需要使用event的事件推送功能，则参考前置节点的事件订阅功能，详情可在前置节点服务文档-附录中的“链上事件订阅”查看</p>
                  <p>-&nbsp也可以使用java-sdk直连节点后进行事件订阅并接收事件推送</p></div>
                                                 
                 `
   }],
   privateKeyManagement: [{
       title: '已登记列表',
-      content: `显示在WeBASE管理台创建的私钥用户，包含私钥用户和公钥用户两种。私钥用户代表拥有私钥信息的用户，私钥托管在WeBASE-Sign服务中；公钥用户则只保存了地址信息。
+      content: `显示在区块链管理平台创建的私钥用户，包含私钥用户和公钥用户两种。私钥用户代表拥有私钥信息的用户，私钥托管在签名服务中；公钥用户则只保存了地址信息。
                 <br/>
                  <p>-&nbsp新增用户：可以创建一个新的随机的私钥并保存，也可以输入一个地址创建一个公钥用户</p>
                  <p>-&nbsp导入私钥：支持导入十六进制/十进制明文私钥、.pem格式、.p12格式私钥文件，也可以导入WeIdentity的十进制.txt格式私钥文件</p>
-                 <p>-&nbsp导出私钥：支持将WeBASE中记录的私钥导出为.p12格式的私钥文件（要求WeBASE-Sign配置允许导出私钥</p>
+                 <p>-&nbsp导出私钥：支持将区块链管理平台中记录的私钥导出为.p12格式的私钥文件（要求签名服务配置允许导出私钥</p>
                  <p>-&nbsp绑定私钥：支持为公钥用户绑定一个私钥，其格式与“导入私钥”一致 </p>                                       
                 `
     },
     {
       title: '全量列表',
-      content: `显示所有链上发交易的私钥地址，包括已登记和未登记的私钥信息。可以通过“导入”按钮将未登记的私钥导入到WeBASE中。                                  
+      content: `显示所有链上发交易的私钥地址，包括已登记和未登记的私钥信息。可以通过“导入”按钮将未登记的私钥导入到区块链管理平台中。                                  
                 `
     }
   ],
   newPermission: [{
     title: '权限管理',
-    content: `<div>FISCO BCOS v2.5.0及以上支持管理链委员会管理和运维管理员管理：
+    content: `<div>支持管理链委员会管理和运维管理员管理：
                 <br/> <br/>
                 链委员会管理：链委员会的修改操作均需要通过多个委员投票完成，链委员拥有投票权，可以增删节点、修改链配置、添加撤销运维、冻结解冻合约、对用户表的写权限控制；
                  <p>-&nbsp修改委员会成员（新增/撤销委员）、修改委员投票阈值、修改委员投票权重值等操作均需要通过投票进行修改；</p>
@@ -177,7 +177,7 @@ export default {
                  普通权限管理员为空时，所有用户拥有特定功能，如：节点管理员为空时，所有用户可以管理节点状态，设置了第一个节点管理员后，非节点管理员不可管理节点状态;
                 <br/>
                 <br/>
-                 <p>详情请参考WeBASE的可视化部署文档</p>
+                 <p>详情请参考区块链管理平台的可视化部署文档</p>
                  <a target='_blank' href='https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/manual/permission_control.html'>https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/manual/permission_control.html</a>
       
                 `
@@ -213,7 +213,7 @@ export default {
                 使用测试功能前，需要到“告警类型配置”页面的左上角开启邮件服务总开关。
                 <br/>
                 <br/>
-                <p>详情请参考WeBASE的可视化部署文档</p>
+                <p>详情请参考区块链管理平台的可视化部署文档</p>
                 <a target='_blank' href='https://webasedoc.readthedocs.io/zh_CN/latest/docs/WeBASE-Console-Suit/index.html#mail-use'>https://webasedoc.readthedocs.io/zh_CN/latest/docs/WeBASE-Console-Suit/index.html#mail-use</a>
        `
   }],
@@ -229,7 +229,7 @@ export default {
                  <p>-&nbsp修改告警内容时，大括号{}以及里面的变量名不可去除，否则无法正常发送告警邮件。</p>
                  <br/>
                  <br/>
-                其中在WeBASE-Node-Manager的配置文件application.yml的constant可以配置定时任务定时监控节点状态、审计状态、证书有效期的频率，监控到异常状态时将触发邮件告警，发送告警邮件到联系人邮箱，同时按配置的间隔时间定时重复发送告警邮件，直到异常状态消除；
+                其中在Node-Manager的配置文件application.yml的constant可以配置定时任务定时监控节点状态、审计状态、证书有效期的频率，监控到异常状态时将触发邮件告警，发送告警邮件到联系人邮箱，同时按配置的间隔时间定时重复发送告警邮件，直到异常状态消除；
                 <br/>
                 注：定时任务的频率为检查系统是否异常的频率，而配置不同的告警类型中的告警时间间隔是发送告警邮件的频率，如，设置检查频率为1h，配置的告警频率为6h，那么，系统会每小时检查一次系统状态，若出现异常，在定时任务检查到异常时，距离上次告警邮件超过6小时，则会发送一次告警邮件。                                                 
                 `
@@ -249,22 +249,22 @@ export default {
     title: '异常用户',
     content: `交易审计是结合区块链数据，私钥管理和合约管理三者的数据，以区块链数据为原材料，以私钥管理和合约管理为依据做的一个综合性的数据分析功能。交易审计提供可视化的去中心化合约部署和交易监控、审计功能，方便识别链资源被滥用的情况，为联盟链治理提供依据。
                 <br/><br/>
-                异常用户会统计监控链上出现的异常交易用户，即：没在WeBASE登记的交易用户。
+                异常用户会统计监控链上出现的异常交易用户，即：没在区块链管理平台登记的交易用户。
                 <br/><br/>
                 若异常用户数达到后台配置的最大值，异常过多时(默认大于等于20)，会停止审计。
                 <br/>
-                此时需要查看交易情况，找出异常原因后，导入异常用户的地址到WeBASE中即可清理异常记录。                
+                此时需要查看交易情况，找出异常原因后，导入异常用户的地址到区块链管理平台中即可清理异常记录。                
                 `
   }],
   unusualContract: [{
     title: '异常合约',
     content: `交易审计是结合区块链数据，私钥管理和合约管理三者的数据，以区块链数据为原材料，以私钥管理和合约管理为依据做的一个综合性的数据分析功能。交易审计提供可视化的去中心化合约部署和交易监控、审计功能，方便识别链资源被滥用的情况，为联盟链治理提供依据。
                 <br/><br/>
-                异常合约会统计监控链上合约部署情况，标记非白名单合约为异常用户，即：没在WeBASE中登记的合约
+                异常合约会统计监控链上合约部署情况，标记非白名单合约为异常用户，即：没在区块链管理平台中登记的合约
                 <br/><br/>
                 若异常合约数达到后台配置的最大值，异常过多时(默认大于等于20)，会停止审计。
                 <br/>
-                此时需要查看交易情况，找出异常原因后，导入异常合约的地址到WeBASE中即可清理异常记录。                               
+                此时需要查看交易情况，找出异常原因后，导入异常合约的地址到区块链管理平台中即可清理异常记录。                               
                 `
   }],
 
@@ -292,7 +292,7 @@ export default {
                  <p>-&nbsp管理员用户，拥有管理平台的读写权限；</p>
                  <p>-&nbsp开发者用户，拥有开发者自身的合约和私钥用户的读写权限，数据概览权限；</p>
                  <br/>
-                开发者模式默认关闭。如需开启此功能，可以在WeBASE-Node-Manager配置文件application.yml中修改developerModeEnable为true，然后重启服务。
+                开发者模式默认关闭。如需开启此功能，可以在Node-Manager配置文件application.yml中修改developerModeEnable为true，然后重启服务。
                 <br/><br/>
                 注：此处账号与私钥管理的私钥用户为两种不同的概念，账号用于管理台权限控制，私钥用户为区块链账户。                                                                        
                 `
@@ -332,7 +332,7 @@ export default {
                  <p>&nbsp&nbsp-&nbsp若本地有新群组的节点前置，则可以通过切换到相应群组的“节点管理”中设置新节点为共识节点；</p>
                  <p>&nbsp&nbsp-&nbsp如果本地没有新群组的节点前置，则需要到已加入该群组的节点的控制台或节点管理平台将新节点加入到共识节点/观察节点</p>
                 <br/>
-                 <p>详情使用说明可以WeBASE使用手册文档中的附录-动态群组管理使用指南</p>
+                 <p>详情使用说明可以区块链管理平台使用手册文档中的附录-动态群组管理使用指南</p>
                  <a target='_blank' href='https://webasedoc.readthedocs.io/zh_CN/latest/docs/WeBASE-Console-Suit/index.html#dynamic_group_use'>https://webasedoc.readthedocs.io/zh_CN/latest/docs/WeBASE-Console-Suit/index.html#dynamic_group_use</a>
                                                                             
                 `
