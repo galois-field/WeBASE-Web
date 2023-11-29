@@ -22,7 +22,7 @@ import { debug } from 'request'
 //simulateLogin
 export function simulateLogin(params) {
     return get({
-        url: `/biz/ns-design/oauth2/query_access_token`,
+        url: `/biz/ns-jckj/oauth2/query_access_token`,
         // url: `${url.ORG_LIST}/account/login`,
         method: 'get',
         params
