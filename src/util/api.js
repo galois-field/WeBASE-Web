@@ -18,11 +18,13 @@ import { post, get, patch, put, deleted } from './http'
 import { reviseParam } from './util'
 import qs from 'qs'
 import { debug } from 'request'
+import address from '../../static/js/href'
+
 
 //simulateLogin
 export function simulateLogin(params) {
     return get({
-        url: `/biz/ns-jckj/oauth2/query_access_token`,
+        url: address.prdUrl,
         // url: `${url.ORG_LIST}/account/login`,
         method: 'get',
         params
