@@ -39,7 +39,9 @@ axiosIns.interceptors.response.use(
     response => {
         if (response.data && (response.data.code === 302000 || response.data.code === 202052 || response.data.code === 202055)) {
             localStorage.removeItem('token')
-            location.href=location.href
+            console.log(location.href)
+            // location.href=location.href
+            window.location.reload()
         }
         return response;
     },
