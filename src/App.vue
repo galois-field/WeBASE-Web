@@ -49,6 +49,9 @@ export default {
       }
     }
   },
+  created(){
+    localStorage.clear()
+  },
   methods: {},
   beforeDestroy() {
     // 清除缓存的操作

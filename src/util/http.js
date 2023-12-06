@@ -17,7 +17,6 @@ import Axios from 'axios'
 import router from '../router'
 import Cookies from 'js-cookie'
 import { debug } from 'request';
-import address from '../../static/js/href'
 
 let axiosIns = Axios.create({
     timeout: 60 * 1000,
@@ -38,11 +37,18 @@ axiosIns.defaults.validateStatus = function () {
 axiosIns.interceptors.response.use(
     response => {
         if (response.data && (response.data.code === 302000 || response.data.code === 202052 || response.data.code === 202055)) {
-            localStorage.removeItem('token')
-            console.log(location.href)
-            // location.href=location.href
-            window.location.reload()
+            if (localStorage.getItem('token')) {
+                localStorage.removeItem('token')
+                let urlStr = location.href.split('?')[1]
+                const urlSearchParams = new URLSearchParams(urlStr)
+                const result = Object.fromEntries(urlSearchParams.entries())
+                location.href = window.paramsConfig.address
+                // router.push({
+                //     query: { ...result, time: new Date().getTime() }
+                // });
+            }
         }
+
         return response;
     },
     error => {
