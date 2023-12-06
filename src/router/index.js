@@ -527,28 +527,28 @@ const routes = [
         }
       }
     ]
-  },
-  {
-    path: '/',
-    component: main,
-    name: '帐号管理',
-    nameKey: 'accountManagement',
-    leaf: true,
-    menuShow: false,
-    iconCls: 'wbs-icon-key sidebar-icon',
-    children: [
-      {
-        path: '/accountInfo',
-        component: accountInfo,
-        name: '帐号管理',
-        nameKey: 'accountManagement',
-        menuShow: true,
-        meta: {
-          requireAuth: true
-        }
-      }
-    ]
-  }
+  }//,
+  // {
+  //   path: '/',
+  //   component: main,
+  //   name: '帐号管理',
+  //   nameKey: 'accountManagement',
+  //   leaf: true,
+  //   menuShow: false,
+  //   iconCls: 'wbs-icon-key sidebar-icon',
+  //   children: [
+  //     {
+  //       path: '/accountInfo',
+  //       component: accountInfo,
+  //       name: '帐号管理',
+  //       nameKey: 'accountManagement',
+  //       menuShow: true,
+  //       meta: {
+  //         requireAuth: true
+  //       }
+  //     }
+  //   ]
+  // }
 ]
 const router = new Router({
   routes
